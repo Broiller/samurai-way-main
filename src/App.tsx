@@ -11,9 +11,8 @@ const App = () => {
             <Header />
             <Navbar />
             <Profile />
-
         </div>
-    );
+    )
 }
 
 export default App;

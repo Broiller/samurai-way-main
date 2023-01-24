@@ -16,18 +16,35 @@ const Message = (props: any) => {
         <div className={s.dialog}>{props.message}</div>
     )
 }
-export const Dialogs = () => {
+export const Dialogs = (props: any) => {
+
+    let dialogsData = [
+        {id: 1, name: "Dimych"},
+        {id: 2, name: "Andrew"},
+        {id: 3, name: "Sveta"},
+        {id: 4, name: "Sasha"},
+        {id: 5, name: "Victor"},
+        {id: 6, name: "Valera"}
+    ]
+
+    let messagesData = [
+        {id: 1, message: "lol"},
+        {id: 2, message: "kek"},
+        {id: 3, message: "yo"},
+        {id: 4, message: "hi"},
+        {id: 5, message: "how"},
+        {id: 6, message: "psss"}
+    ]
+
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                <DialogItem name="Mama" id="1"/>
-                <DialogItem name="Papa" id="2"/>
-                <DialogItem name="I" id="3"/>
+                <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
+                <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
             </div>
             <div className={s.messages}>
-                <Message message="HI"/>
-                <Message message="lol"/>
-                <Message message="kek"/>
+                <Message message={messagesData[0].message}/>
+                <Message message={messagesData[1].message}/>
             </div>
         </div>
     )

@@ -25,15 +25,24 @@ let state = {
             {id: 6, message: "psss"}
         ]
     },
-    // sidebar: {
-    //     friends: [
-    //         {id: 1, name: "Andrew"},
-    //         {id: 2, name: "Sasha"},
-    //         {id: 3, name: "Sveta"},
-    //
-    //     ]
-    //
-    // },
+    sidebar: {
+        friends: [
+            {id: 1, name: "Andrew"},
+            {id: 2, name: "Sasha"},
+            {id: 3, name: "Sveta"},
+
+        ]
+
+    },
 }
 
+
+export let addPost = (postMessage:any) => {
+    let newPost = {
+        id: 5,
+        message: postMessage,
+        likesCount: 0
+    };
+state.profilePage.posts.push(newPost)
+}
 export default state

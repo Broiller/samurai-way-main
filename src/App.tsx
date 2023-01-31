@@ -10,7 +10,7 @@ import {News} from "./components/News/News";
 import {Settings} from "./components/Serrings/Settings";
 
 
-const App = (props) => {
+const App = (props:any) => {
 
 
     return (
@@ -18,11 +18,17 @@ const App = (props) => {
                 <Header/>
                 <Navbar/>
                 <div className='app-wrapper-content'>
-                    <Route path='/dialogs' render={() => <Dialogs state={props.state.messagesPage}/>}/>
-                    <Route path='/profile' render={() => <Profile state={props.state.profilePage}/>}/>
-                    <Route path='/music' render={() => <Music/>}/>
-                    <Route path='/news' render={() => <News/>}/>
-                    <Route path='/settings' render={() => <Settings/>}/>
+                    <Route path='/dialogs'
+                           render={() => <Dialogs
+                               state={props.state.messagesPage}/>}/>
+                    <Route path='/profile'
+                           render={() => <Profile
+                               state={props.state.profilePage}
+                               addPost={props.addPost}
+                           />}/>
+                    {/*<Route path='/music' render={() => <Music/>}/>*/}
+                    {/*<Route path='/news' render={() => <News/>}/>*/}
+                    {/*<Route path='/settings' render={() => <Settings/>}/>*/}
                     {/*<Route path='/friends' render={() => <Friends/>}/>*/}
                 </div>
             </div>

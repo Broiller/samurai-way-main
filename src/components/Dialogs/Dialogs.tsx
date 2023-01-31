@@ -3,10 +3,10 @@ import s from "./Dialogs.module.css";
 import {DialogItem} from "./DialogItem/DialogItem";
 import {Message} from "./Message/Message";
 
-export const Dialogs = (props) => {
+export const Dialogs = (props:any) => {
 
-    let dialogsElement = props.state.dialogs.map(d =><DialogItem name={d.name} id={d.id}/>)
-    let messagesElement = props.state.messages.map(m =><Message message={m.message}/>)
+    let dialogsElement = props.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>)
+    let messagesElement = props.dialogsPage.messages.map(m =><Message message={m.message}/>)
 
     return (
         <div className={s.dialogs}>

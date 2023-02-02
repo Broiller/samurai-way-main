@@ -56,6 +56,6 @@ export let updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     rerenderEntireThree(state);
 }
-
+//
 
 export default state

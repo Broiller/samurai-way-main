@@ -1,15 +1,7 @@
 import React from 'react';
 import s from './MyPosts.module.css'
 import Post from './Post/Post';
-import {updateNewPostText} from "../../../redux/state";
-import {text} from "stream/consumers";
 
-
-// type MyPostsType = {
-//     id: number,
-//     message: string,
-//     likesCount: number
-// }
 const MyPosts = (props) => {
 
     let postElement =

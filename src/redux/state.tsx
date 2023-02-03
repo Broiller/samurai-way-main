@@ -1,4 +1,8 @@
-import {rerenderEntireThree} from "../render";
+import {observe} from "web-vitals/dist/modules/lib/observe";
+
+let rerenderEntireThree = () => {
+    console.log("hello")
+}
 
 let state = {
     profilePage: {
@@ -41,7 +45,7 @@ let state = {
 
 window.state = state
 
-export let addPost = () => {
+export const addPost = () => {
     let newPost = {
         id: 5,
         message: state.profilePage.newPostText,
@@ -52,10 +56,13 @@ export let addPost = () => {
     rerenderEntireThree(state);
 }
 
-export let updateNewPostText = (newText) => {
+export const updateNewPostText = (newText) => {
     state.profilePage.newPostText = newText;
     rerenderEntireThree(state);
 }
-//asads
+
+export const subscribe = (observer) => {
+    rerenderEntireThree = observer;
+}
 
 export default state

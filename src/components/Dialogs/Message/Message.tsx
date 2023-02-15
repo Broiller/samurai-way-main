@@ -12,10 +12,7 @@ export const Message = (props: any) => {
     return (
         <div>
             <div className={s.dialog}>{props.message}
-                <div>
-                    <textarea ref={newMessageElement}></textarea>
-                    <button onClick={addMessage}>send message</button>
-                </div>
+
             </div>
         </div>
     )

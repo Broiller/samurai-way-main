@@ -6,7 +6,7 @@ import store from "./redux/redux-store";
 import {Provider} from "react-redux";
 
 
-let rerenderEntireThree = (state) => {
+
     ReactDOM.render(
         <BrowserRouter>
             <Provider store={store}>
@@ -14,11 +14,3 @@ let rerenderEntireThree = (state) => {
             </Provider>
         </BrowserRouter>, document.getElementById('root')
     );
-}
-
-rerenderEntireThree(store.getState());
-
-store.subscribe(() => {
-    let state = store.getState()
-    rerenderEntireThree(state)
-});

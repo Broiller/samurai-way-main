@@ -2,7 +2,13 @@ import profileReducer from "./profile-reducer";
 import dialogsReducer from "./dialogs-reducer";
 import sidebarReducer from "./sidebar-reducer";
 
-
+export type StoreType = {
+    _state: object
+    _callSubscriber: () => void
+    getState: () => object
+    subscribe: (observer) => void
+    dispatch: (action) => void
+}
 let store = {
     _state: {
         profilePage: {
